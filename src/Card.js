@@ -1,8 +1,13 @@
+const data = require('./data');
+const prototypeQuestions = data.prototypeData;
+const util = require('./util');
 class Card {
-    constructor(cardId, question, answerOptions, correctAnswer) {
-        this.cardId = cardId;
+    constructor(cardIdNumber, question, answers, correctAnswer) {
+        this.cardIdNumber = cardIdNumber;
         this.question = question;
-        this.answerOptions = answerOptions;
+        this.answers = answers;
         this.correctAnswer = correctAnswer;
     };
 };
+
+module.exports = Card;
